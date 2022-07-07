@@ -5,7 +5,7 @@ const API_HOST = config.api_host;
 
 export default class PostService {
   static async getAll() {
-    const response = await axios.get(`${API_HOST}/posts`);
+    const response = await axios.get(`${API_HOST}/tasks`);
     return response.data;
   }
 }

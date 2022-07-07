@@ -11,7 +11,7 @@ function App() {
   const [posts, setPosts] = useState([]);
   const [fetchPosts, isPostsLoading, postError] = useFetching(async () => {
     const posts = await PostService.getAll();
-    setPosts(posts);
+    setPosts(posts.task_result.records);
   });
 
   useEffect(() => {
