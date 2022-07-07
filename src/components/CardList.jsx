@@ -8,8 +8,8 @@ const CardList = ({ posts, title }) => {
 
     return (
         <div>
-            {posts.map((post) => (
-                <CardItem post={post} key={post.id} />
+            {posts.map((post, index) => (
+                <CardItem post={post} key={index} />
             ))
             }
         </div>
