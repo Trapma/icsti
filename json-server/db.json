@@ -41040,5 +41040,137 @@
       "title": "ipsam aperiam voluptates qui",
       "completed": false
     }
-  ]
+  ],
+  "tasks": {
+    "task_id": "4dbeb6b7-9d67-40eb-a836-43400f65e3a8",
+    "task_status": "SUCCESS",
+    "task_result": {
+      "records": [
+        {
+          "title": "Interleaved Practice Improves Mathematics Learning",
+          "description": "Summary outline of published paper",
+          "publication_date": "2021-04-06",
+          "keywords": ["maths", "practice"],
+          "link": "https://zenodo.org/record/4663897",
+          "access_right": "open",
+          "creators": [
+            { "affiliation": "", "name": "Hartwig, M." },
+            { "affiliation": "", "name": "Rohrer, D." }
+          ]
+        },
+        {
+          "title": "Maths anxiety interferes with learning novel mathematics contents in early elementary school",
+          "description": "Project summary article",
+          "publication_date": "2021-02-14",
+          "keywords": ["maths", "anxiety", "learning"],
+          "link": "https://zenodo.org/record/4540569",
+          "access_right": "open",
+          "creators": [
+            { "affiliation": "University of Bologna", "name": "Tomasetto,, Carolo" },
+            { "affiliation": "Loughborough University", "name": "Morsanyi, Kinga" },
+            { "affiliation": "University of Bologna", "name": "Guardabassi, Veronica" },
+            { "affiliation": "Queen's University, Belfast", "name": "O'Connor, Paddy" }
+          ]
+        },
+        {
+          "title": "Testing the Specificity of Predictors of Reading, Spelling and Maths: A New Model of the Association Among Learning Skills Based on Competence, Performance and Acquisition",
+          "description": "In a previous study (Zoccolotti et al., 2020) we examined reading, spelling, and maths skills in an unselected group of 129 Italian children attending fifth grade by testing various cognitive predictors; results showed a high degree of predictors&rsquo; selectivity for each of these three behaviors. In the present study, we focused on the specificity of the predictors by performing cross-analyses on the same dataset; i.e., we predicted spelling and maths skills based on reading predictors, reading based on maths predictors and so on. Results indicated that some predictors, such as the Orthographic Decision and the Arithmetic Facts tests, predicted reading, spelling and maths skills in similar ways, while others predicted different behaviors but only for a specific parameter, such as fluency but not accuracy (as in the case of RAN), and still others were specific for a single behavior (e.g., Visual-auditory Pseudo-word Matching test predicted only spelling skills). To interpret these results, we propose a novel model of learning skills separately considering factors in terms of competence, performance and acquisition (automatization). Reading, spelling and calculation skills would depend on the development of discrete and different abstract competences (accounting for the partial dissociations among learning disorders reported in the literature). By contrast, overlap among behaviors would be accounted for by defective acquisition in automatized responses to individual &ldquo;instances&rdquo;; this latter skill is item specific but domain independent. Finally, performance factors implied in task&rsquo;s characteristics (such as time pressure) may contribute to the partial association among learning skills. It is proposed that this new model may provide a useful base for interpreting the diffuse presence of comorbidities among learning disorders.",
+          "publication_date": "2020-12-07",
+          "keywords": ["comorbidity", "reading", "spelling", "maths", "proximal predictors", "learning disabilities", "dyslexia", "acquisition of instances"],
+          "link": "https://zenodo.org/record/4575603",
+          "access_right": "open",
+          "creators": [
+            {
+              "affiliation": "1 Department of Psychology, Sapienza University of Rome, Rome, Italy, 2 Developmental Dyslexia Lab, IRCCS Fondazione Santa Lucia, Rome, Italy",
+              "name": "Zoccolotti, Pierluigi"
+            },
+            { "affiliation": "Developmental Dyslexia Lab, IRCCS Fondazione Santa Lucia, Rome, Italy", "name": "De Luca, Maria" },
+            {
+              "affiliation": "Lab of Applied Psychology and Intervention, Department of History, Society and Human Studies, University of Salento, Lecce, Italy",
+              "name": "Marinelli, Chiara Valeria"
+            },
+            { "affiliation": "Department of Movement, Human and Health Sciences, Foro Italico University of Rome, Rome, Italy", "name": "Spinelli, Donatella" }
+          ]
+        },
+        {
+          "title": "weDraw Movement Corpus",
+          "description": "Summary  The weDraw Movement Corpus consists of three datasets: the weDraw-1 Movement Dataset (w1MD), the VI-weDraw Movement Dataset (VIwMD), and the weDraw-Games Movement Dataset (wGMD). The w1MD and VIwMD datasets were collected from children (with visual impairment, for the VIwMD dataset) based on game-like (i.e. fun) activities inspired by qualitative pedagogical studies. The wGMD dataset was based on weDraw serious games (Cartesian Garden, Angles Shapes and Fraction Musical Games) in both schools for children with visual impairment and mainstream schools.  The three datasets were built using video cameras, a Microsoft Kinect sensor, and the Notch wearable sensors. However, only the motion capture data from these sensors (and not raw videos) are open.  Please see the corpus README for more details.  &nbsp;  How To Cite and Where to Get More Details   \tPlease cite the following papers in all publications that result from use of the weDraw-1 Movement Dataset:   Olugbade, T. A., Newbold, J., Johnson, R., Volta, E., Alborno, P., Dillon, M., Volpe, G., Bianchi-Berthouze, N. Automatic Detection of Reflective Thinking in Mathematical Problem Solving based on Unconstrained Bodily Exploration, https://arxiv.org/abs/1812.07941.  More details about the weDraw-1 Movement Dataset can also be found there. &nbsp;",
+          "publication_date": "2019-01-25",
+          "keywords": ["movement", "body", "motion capture", "learning", "education", "mathematics", "maths", "children", "confidence", "reflective thinking", "serious games"],
+          "link": "https://zenodo.org/record/2548828",
+          "access_right": "restricted",
+          "creators": [
+            { "affiliation": "University College London", "name": "Nadia Bianchi-Berthouze" },
+            { "affiliation": "Universita Degli Studi Di Genoa", "name": "Gualtiero Volpe" }
+          ]
+        },
+        {
+          "title": "Call for Paper - International Journal of Soft Computing,Mathematics and Control",
+          "description": "The International Journal of Soft Computing, Mathematics and Control (IJSCMC) is a Quarterly peer-reviewed and refereed open access journal that publishes articles which contribute new results in all areas of Soft Computing, Pure, Applied and Numerical Mathematics and Control. The focus of this new journal is on all theoretical and numerical methods on soft computing, mathematics and control theory with applications in science and industry. The goal of this journal is to bring together researchers and practitioners from academia and industry to focus on latest topics of soft computing, pure, applied and numerical mathematics and control engineering, and establishing new collaborations in these areas.&nbsp;  Authors are solicited to contribute to this journal by submitting articles that illustrate new algorithms, theorems, modeling results, research results, projects, surveying works and industrial experiences that describe significant advances in Soft Computing, Mathematics and Control Engineering&nbsp;",
+          "publication_date": "2020-08-26",
+          "keywords": ["computer", "maths", "soft computing"],
+          "link": "https://zenodo.org/record/4001785",
+          "access_right": "open",
+          "creators": [{ "affiliation": "", "name": "Sagar Kumar and Amit Kumar Singh" }]
+        },
+        {
+          "title": "Does the choice of maths textbook make a difference?",
+          "description": "Outline of peer reviewed and published paper",
+          "publication_date": "2021-09-30",
+          "keywords": ["maths", "textbooks"],
+          "link": "https://zenodo.org/record/5541461",
+          "access_right": "open",
+          "creators": [
+            { "affiliation": "Europa-Universit\u00e4t Flensburg, Germany", "name": "Sievert, Henning" },
+            { "affiliation": "Hamburg University, Germany", "name": "van den Ham, Ann-Karin" },
+            { "affiliation": "Leibniz Institute of Science and Mathematics Education Kiel, Germany", "name": "Heinze, Aiso" }
+          ]
+        },
+        {
+          "title": "MSSC-maths-and-stats-week Introduction to R Markdown for R users",
+          "description": "A two hour Introduction to R Markdown for R users delivered as part of Maths and Stats Skills week for the Maths and Stats Skills Centre, University of York, UK",
+          "publication_date": "2020-02-17",
+          "keywords": [],
+          "link": "https://zenodo.org/record/3670893",
+          "access_right": "open",
+          "creators": [{ "affiliation": "University of York", "name": "Rand, Emma" }]
+        },
+        {
+          "title": "Efficient internal and external trade with Blockchain and Bitcoin technology, the ISBIT Exchange case",
+          "description": "Universidad Nacional Aut&oacute;noma de M&eacute;xico, Actuary &amp; Maths",
+          "publication_date": "2018-05-30",
+          "keywords": [],
+          "link": "https://zenodo.org/record/1184419",
+          "access_right": "open",
+          "creators": [{ "affiliation": "", "name": "Sebastian Acosta Checa" }]
+        },
+        {
+          "title": "Efficient internal and external trade with Blockchain and Bitcoin technology, the ISBIT Exchange case",
+          "description": "Universidad Nacional Aut&oacute;noma de M&eacute;xico, Actuary &amp; Maths, Mexico City, Mexico",
+          "publication_date": "2018-05-30",
+          "keywords": [],
+          "link": "https://zenodo.org/record/1184332",
+          "access_right": "open",
+          "creators": [{ "affiliation": "", "name": "Sebastian Acosta Checa" }]
+        },
+        {
+          "title": "Accounting for Unobservable Preference Heterogeneity and Evaluating Alternative Anchoring Approaches to Estimate Country-Specific EQ-5D-Y Value Sets: A Case Study Using Spanish Preference Data",
+          "description": "Objectives  The EuroQol Group published the EQ-5D-Y valuation protocol that recommends 2 valuation techniques to elicit preferences: composite time trade-off (C-TTO) and discrete choice experiments (DCEs). The protocol left the decision of what modeling approach to use open for researchers. Our aims were to explore modeling strategies allowing generation of EQ-5D-Y value sets and to produce an EQ-5D-Y Spanish value set.  Methods  We used EQ-5D-Y DCE and C-TTO data collected in Spain following the protocol and adopted a staged approach for our modeling exercise. First, we selected the best performing DCE&nbsp;latent class model&nbsp;and evaluated models from 2 to 10 classes. We selected the preferred model based on best goodness of fit in terms of the&nbsp;Bayesian information criterion. We considered 2 anchoring approaches to estimate utility values: (1) pits state anchoring and (2) hybrid models (using all available C-TTO responses). All analysis were weighted to be representative of the Spanish population.  Results  We collected 1005 DCE and 200 C-TTO interviews. We selected a DCE model including 4 classes. Hybrid models using all available C-TTO observations produced a narrower range of values than the pits state anchoring approach.  Conclusions  In this article, we have presented an EQ-5D-Y value set that can be used for cost-utility analysis in Spain. The international EQ-5D-Y valuation protocol should be updated to include a different set of health states for the C-TTO experiment if researchers wish to use alternative anchoring approaches to the &ldquo;pits state.&rdquo;",
+          "publication_date": "2021-12-06",
+          "keywords": ["composite time trade-offdiscrete choice experimentEQ-5D-Yhealth-related quality of lifevalue set"],
+          "link": "https://zenodo.org/record/5772848",
+          "access_right": "open",
+          "creators": [
+            { "affiliation": "Maths in Health", "name": "Ramos-Go\u00f1i, Juan M." },
+            { "affiliation": "Maths in Health", "name": "Oppe, Mark" },
+            { "affiliation": "Maths in Health", "name": "Estevez-Carrillo, Anabel" },
+            { "affiliation": "Maths in Health", "name": "Rivero-Arias, Oliver" },
+            { "affiliation": "", "name": "IMPACT HTA Group" }
+          ]
+        }
+      ],
+      "current_page": "1",
+      "pages_number": 27
+    }
+  }
 }
