@@ -5,20 +5,18 @@ import Header from "./components/Header";
 import CardList from "./components/CardList";
 import PostService from "./API/PostService";
 import { LoaderUi } from "./components/UI/loader/LoaderUi";
+import { useFetching } from "./hooks/useFetching";
 
 function App() {
   const [posts, setPosts] = useState([]);
-  const [isPostsLoading, setIsPostLoading] = useState(false);
+  const [fetchPosts, isPostsLoading, postError] = useFetching(async () => {
+    const posts = await PostService.getAll();
+    setPosts(posts);
+  });
+
   useEffect(() => {
     fetchPosts();
   }, []);
-
-  async function fetchPosts() {
-    setIsPostLoading(true);
-      const posts = await PostService.getAll();
-      setPosts(posts);
-      setIsPostLoading(false);
-  }
 
   return (
     <div className="App">
