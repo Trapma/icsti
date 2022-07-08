@@ -14,25 +14,27 @@ const CardItem = (props) => {
 
 
     return (
-        <div>
-            <div class="post-preview">
-                <a href="post.html">
-                    <h2 class="post-title">{props.post.title}</h2>
-                    <h3 class="post-subtitle">{subTitle}</h3>
+        <div class="container" >
+            <div className="text-start post-preview">
+                <a href="post.html" className='text-left'>
+                    <h4 class="fs-4 text-start">{props.post.title}</h4>
+                    <p class="fs-6 my-0 text-start">{subTitle}</p>
                 </a>
-                <p class="post-meta">
-                    Posted by
-                    <a href="#!">{' ' + creatorsText}</a>
-                    <br />
-                    on {props.post.publication_date}
-                    <br />
-                    {
-                        props.post.keywords.map((key) => (
-                            <BadgesUi>{key}</BadgesUi>
-                        ))
-                    }
+                <div className='d-flex justify-content-between align-items-end mt-2' style={{ fontSize: "12px" }}>
+                    <div className='text-start'>
+                        {
+                            props.post.keywords.map((key) => (
+                                <BadgesUi>{key}</BadgesUi>
+                            ))
+                        }
+                    </div>
+                    <p class="post-meta text-end m-0">
+                        Posted by
+                        <a href="#!">{' ' + creatorsText + ' '}</a>
+                        on {props.post.publication_date}
 
-                </p>
+                    </p>
+                </div>
             </div>
             <hr class="my-4" />
         </div>
