@@ -1,5 +1,6 @@
 import React from 'react'
 import { BadgesUi } from './UI/badges/BadgesUi'
+import { Row, Col } from 'react-bootstrap'
 
 const CardItem = (props) => {
 
@@ -20,24 +21,37 @@ const CardItem = (props) => {
                     <h4 class="fs-4 text-start">{props.post.title}</h4>
                     <p class="fs-6 my-0 text-start">{subTitle}</p>
                 </a>
-                <div className='d-flex justify-content-between align-items-end mt-2' style={{ fontSize: "12px" }}>
-                    <div className='text-start'>
-                        {
-                            props.post.keywords.map((key) => (
-                                <BadgesUi>{key}</BadgesUi>
-                            ))
-                        }
-                    </div>
-                    <p class="post-meta text-end m-0">
-                        Posted by
-                        <a href="#!">{' ' + creatorsText + ' '}</a>
-                        on {props.post.publication_date}
+                <div className='align-items-end mt-2' style={{ fontSize: "12px" }}>
+                    <Row>
+                        <Col xs={6}>
+                            {
+                                props.post.keywords.map((key) => (
+                                    <BadgesUi>{key}</BadgesUi>
+                                ))
+                            }
 
-                    </p>
+                        </Col>
+                        <Col xs={6} >
+                            <Row className=' justify-content-between'>
+                                <Col xs={12} sm={7} md={8} lg={9} className='text-end'>
+
+                                    Опубликовано:
+                                    <a href="#!">{' ' + creatorsText}</a>
+
+
+                                </Col>
+                                <Col xs={12} sm={5} md={4} lg={3} className='text-end'>
+
+                                    {' ' + props.post.publication_date}
+
+                                </Col>
+                            </Row>
+                        </Col>
+                    </Row>
                 </div>
-            </div>
+            </div >
             <hr class="my-4" />
-        </div>
+        </div >
     )
 }
 
