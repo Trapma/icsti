@@ -4,6 +4,7 @@ import "./index.css";
 import App from "./App";
 // Importing the Bootstrap CSS
 import "bootstrap/dist/css/bootstrap.min.css";
+import 'bootstrap/dist/js/bootstrap.js';
 import "./css/styles.css";
 import Projects from "./routes/Projects";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
