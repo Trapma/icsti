@@ -1,12 +1,10 @@
-import React from 'react'
+import { Link } from "react-router-dom"
 
 const Navigation = () => {
     return (
         <nav className="navbar navbar-expand-lg navbar-light" id="mainNav">
             <div className="container px-4 px-lg-5">
-                <a className="navbar-brand" href="index.html">
-                    МЦНТИ
-                </a>
+                <Link className="navbar-brand" to='/'>МЦНТИ</Link>
                 <button
                     className="navbar-toggler"
                     type="button"
@@ -22,24 +20,19 @@ const Navigation = () => {
                 <div className="collapse navbar-collapse" id="navbarResponsive">
                     <ul className="navbar-nav ms-auto py-4 py-lg-0">
                         <li className="nav-item">
-                            <a className="nav-link px-lg-3 py-3 py-lg-4" href="index.html">
-                                О МЦНТИ
-                            </a>
+                            <Link className="nav-link px-lg-3 py-3 py-lg-4" to='/about'>О МЦНТИ</Link>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link px-lg-3 py-3 py-lg-4" href="about.html">
-                                Проекты
-                            </a>
+                            <Link className="nav-link px-lg-3 py-3 py-lg-4" to='/service'> Услуги</Link>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link px-lg-3 py-3 py-lg-4" href="post.html">
-                                Услуги
-                            </a>
+                            <Link className="nav-link px-lg-3 py-3 py-lg-4" to='/project'> Проекты</Link>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link px-lg-3 py-3 py-lg-4" href="contact.html">
-                                Архивы
-                            </a>
+                            <Link className="nav-link px-lg-3 py-3 py-lg-4" to='/archive'>Архивы</Link>
+                        </li>
+                        <li className="nav-item">
+                            <Link className="nav-link px-lg-3 py-3 py-lg-4" to='/contact'>Контакты</Link>
                         </li>
                     </ul>
                 </div>
