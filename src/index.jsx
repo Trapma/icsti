@@ -11,6 +11,7 @@ import About from "./routes/About";
 import Service from "./routes/Service";
 import Archive from "./routes/Archive";
 import Contact from "./routes/Contact";
+import News from "./routes/News";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -22,6 +23,8 @@ root.render(
         <Route path="/project" element={<Projects />} />
         <Route path="/archive" element={<Archive />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/news" element={<News />} />
+        <Route path="*" element={<h1> Такой страницы не существует</h1>} />
 
       </Route>
     </Routes>
