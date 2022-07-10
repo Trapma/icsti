@@ -30,9 +30,9 @@ function Service() {
                         <p className="text-start">описание технологии или разработки с указанием технических характеристик и конкурентных преимуществ без раскрытия ноу-хау;</p>
                         <p className="text-start">иллюстрационные материалы (схемы, графики, фотографии, рисунки и т.п.);</p>
                         <p className="text-start">сведения и документы, характеризующие правовые аспекты технологии или научно-технической разработки (права владения, права интеллектуальной собственности, передача прав, лицензионные соглашения и т.д.).</p>
-                        <ul class="list-group list-group-flush">
-                            <li class="list-group-item">Тел.: +7 (499) 198-70-21</li>
-                            <li class="list-group-item">E-mail: <a href="#">icsti@icsti.int</a></li>
+                        <ul className="list-group list-group-flush">
+                            <li className="list-group-item">Тел.: +7 (499) 198-70-21</li>
+                            <li className="list-group-item">E-mail: <a href="#">icsti@icsti.int</a></li>
                         </ul>
 
                     </div>
