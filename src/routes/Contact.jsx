@@ -17,23 +17,23 @@ function Contact() {
                                 <form id="contactForm" data-sb-form-api-token="API_TOKEN">
                                     <div className="form-floating">
                                         <input className="form-control" id="name" type="text" placeholder="Enter your name..." data-sb-validations="required" />
-                                        <label for="name">Name</label>
+                                        <label htmlFor="name">Name</label>
                                         <div className="invalid-feedback" data-sb-feedback="name:required">A name is required.</div>
                                     </div>
                                     <div className="form-floating">
                                         <input className="form-control" id="email" type="email" placeholder="Enter your email..." data-sb-validations="required,email" />
-                                        <label for="email">Email address</label>
+                                        <label htmlFor="email">Email address</label>
                                         <div className="invalid-feedback" data-sb-feedback="email:required">An email is required.</div>
                                         <div className="invalid-feedback" data-sb-feedback="email:email">Email is not valid.</div>
                                     </div>
                                     <div className="form-floating">
                                         <input className="form-control" id="phone" type="tel" placeholder="Enter your phone number..." data-sb-validations="required" />
-                                        <label for="phone">Phone Number</label>
+                                        <label htmlFor="phone">Phone Number</label>
                                         <div className="invalid-feedback" data-sb-feedback="phone:required">A phone number is required.</div>
                                     </div>
                                     <div className="form-floating">
                                         <textarea className="form-control" id="message" placeholder="Enter your message here..." style={{ height: "12rem" }} data-sb-validations="required"></textarea>
-                                        <label for="message">Message</label>
+                                        <label htmlFor="message">Message</label>
                                         <div className="invalid-feedback" data-sb-feedback="message:required">A message is required.</div>
                                     </div>
                                     <br />
