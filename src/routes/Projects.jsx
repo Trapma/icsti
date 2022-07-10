@@ -7,19 +7,23 @@ import { useFetching } from "../hooks/useFetching";
 
 function Projects() {
     const [posts, setPosts] = useState([]);
-    const [fetchPosts, isPostsLoading, postError] = useFetching(async () => {
-        const posts = await PostService.getAll();
+    const [isChecked, setIsChecked] = useState(true)
+    const [fetchPosts, isPostsLoading, postError] = useFetching(async (textSearch, isChecked) => {
+        const posts = await PostService.getSearch(textSearch, isChecked);
         setPosts(posts.task_result.records);
     });
 
-    useEffect(() => {
-        fetchPosts();
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, []);
+    // useEffect(() => {
+    //     fetchPosts(textSearch, isChecked);
+    //     // eslint-disable-next-line react-hooks/exhaustive-deps
+    // }, []);
 
+    const search = (textSearch) => {
+        fetchPosts(textSearch, isChecked);
+    }
     return (
         <div>
-            <Header search={true} title="Проекты" />
+            <Header isChecked={isChecked} setIsChecked={setIsChecked} search={search} title="Проекты" />
 
             {postError && <h1>Произошла ошибка ${postError}</h1>}
             {isPostsLoading ? (

@@ -1,7 +1,11 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { SearchUi } from './UI/search/SearchUi'
 
-export const Header = ({ title, search }) => {
+export const Header = ({ title, search, setIsChecked, isChecked }) => {
+    const searchDomain = isChecked ? 'Zenodo' : 'Core'
+    const changeDomain = (e) => {
+        setIsChecked(e.target.checked)
+    }
     return (
         <header className="masthead" style={{ backgroundImage: "url('assets/img/about-bg.jpg')" }}>
             <div className="container position-relative px-4 px-lg-5">
@@ -13,7 +17,18 @@ export const Header = ({ title, search }) => {
                             {search &&
                                 <div>
                                     <br />
-                                    <SearchUi />
+                                    <div className="form-check form-switch">
+                                        <input
+                                            id="flexSwitchCheckChecked"
+                                            className="form-check-input"
+                                            type="checkbox"
+                                            checked={isChecked}
+                                            onChange={(e) => { changeDomain(e) }}
+
+                                        />
+                                        <label className="form-check-label" htmlFor="flexSwitchCheckChecked">Поиск будет производиться по домену {searchDomain}</label>
+                                    </div>
+                                    <SearchUi search={search} />
                                 </div>
                             }
                         </div>

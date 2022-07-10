@@ -8,4 +8,15 @@ export default class PostService {
     const response = await axios.get(`${API_HOST}/tasks`);
     return response.data;
   }
+
+  static async getSearch(textSearch, isChecked) {
+    const domain = isChecked ? "Zenodo" : "Core";
+    console.log("domain test", domain);
+    const response = await axios.get(`${API_HOST}/search`, {
+      params: {
+        query: textSearch,
+      },
+    });
+    return response;
+  }
 }
