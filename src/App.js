@@ -1,36 +1,19 @@
 import "./App.css";
-import React, { useEffect, useState } from "react";
+import { Outlet, useLocation } from "react-router-dom";
+import React from "react";
 import Navigation from "./components/Navigation";
 import Header from "./components/Header";
-import CardList from "./components/CardList";
-import PostService from "./API/PostService";
-import { LoaderUi } from "./components/UI/loader/LoaderUi";
-import { useFetching } from "./hooks/useFetching";
+import Footer from "./components/Footer";
 
 function App() {
-  const [posts, setPosts] = useState([]);
-  const [fetchPosts, isPostsLoading, postError] = useFetching(async () => {
-    const posts = await PostService.getAll();
-    setPosts(posts.task_result.records);
-  });
-
-  useEffect(() => {
-    fetchPosts();
-  }, []);
+  let location = useLocation();
 
   return (
     <div className="App">
       <Navigation />
-      <Header />
-
-      {postError && <h1>Произошла ошибка ${postError}</h1>}
-      {isPostsLoading ? (
-        <div style={{ display: "flex", justifyContent: "center", marginTop: "50px" }}>
-          <LoaderUi animation={"border"} variant={"dark"} />
-        </div>
-      ) : (
-        <CardList posts={posts} />
-      )}
+      {location.pathname === "/" && <Header search={false} title="МЦНТИ" />}
+      <Outlet />
+      <Footer />
     </div>
   );
 }
