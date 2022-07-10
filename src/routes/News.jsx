@@ -7,7 +7,7 @@ function News() {
     return (
         <div>
             <Header title="Новости" />
-            <div className="container">
+            <div className="">
                 <div className="post-preview">
                     <a href="post.html"><h2 className="post-title"> Вышел бюллетень агентства МОНЦАМЭ (Монголия)</h2></a>
                     Штаб-квартира
