@@ -10,7 +10,7 @@ import Projects from "./routes/Projects";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import About from "./routes/About";
 import Service from "./routes/Service";
-import Archive from "./routes/Archive";
+// import Archive from "./routes/Archive";
 import Contact from "./routes/Contact";
 import News from "./routes/News";
 
@@ -22,7 +22,7 @@ root.render(
         <Route path="/about" element={<About />} />
         <Route path="/service" element={<Service />} />
         <Route path="/project" element={<Projects />} />
-        <Route path="/archive" element={<Archive />} />
+        {/* <Route path="/archive" element={<Archive />} /> */}
         <Route path="/contact" element={<Contact />} />
         <Route path="/news" element={<News />} />
         <Route path="*" element={<h1> Такой страницы не существует</h1>} />

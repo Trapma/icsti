@@ -28,9 +28,9 @@ const Navigation = () => {
                         <li className="nav-item">
                             <Link className="nav-link px-lg-3 py-3 py-lg-4" to='/project'> Проекты</Link>
                         </li>
-                        <li className="nav-item">
+                        {/* <li className="nav-item">
                             <Link className="nav-link px-lg-3 py-3 py-lg-4" to='/archive'>Архивы</Link>
-                        </li>
+                        </li> */}
                         <li className="nav-item">
                             <Link className="nav-link px-lg-3 py-3 py-lg-4" to='/about'>О МЦНТИ</Link>
                         </li>
