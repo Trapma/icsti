@@ -1,4 +1,3 @@
-import "../App.css";
 import React, { useEffect, useState } from "react";
 import Header from "../components/Header";
 import CardList from "../components/CardList";
@@ -19,7 +18,7 @@ function Projects() {
     }, []);
 
     return (
-        <div className="App">
+        <div>
             <Header search={true} title="Проекты" />
 
             {postError && <h1>Произошла ошибка ${postError}</h1>}
