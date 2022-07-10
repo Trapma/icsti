@@ -17,7 +17,7 @@ const CardItem = (props) => {
     return (
         <div class="container" >
             <div className="text-start post-preview">
-                <a href="post.html" className='text-left'>
+                <a href={props.post.link} className='text-left'>
                     <h4 class="fs-4 text-start">{props.post.title}</h4>
                     <p class="fs-6 my-0 text-start">{subTitle}</p>
                 </a>
