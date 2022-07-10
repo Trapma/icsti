@@ -33,17 +33,17 @@ const CardItem = (props) => {
                         </Col>
                         <Col xs={6} >
                             <Row className=' justify-content-between'>
-                                <Col xs={12} sm={7} md={8} lg={9} className='text-end'>
+                                <Col className='text-end'>
 
                                     Опубликовано:
                                     <a href="#!">{' ' + creatorsText}</a>
 
 
                                 </Col>
-                                <Col xs={12} sm={5} md={4} lg={3} className='text-end'>
-
+                            </Row>
+                            <Row>
+                                <Col className='text-end'>
                                     {' ' + props.post.publication_date}
-
                                 </Col>
                             </Row>
                         </Col>
