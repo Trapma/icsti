@@ -7,9 +7,9 @@ const API_ICSTI = config.icsti;
 export default class NewsService {
   static async getNews() {
     // тестовые данные
-    const response = await axios.get(`${API_HOST}/news`);
+    // const response = await axios.get(`${API_HOST}/news`);
 
-    // const response = await axios.get(`${API_ICSTI}/news/list`);
+    const response = await axios.get(`${API_ICSTI}/news/list`);
     return response;
   }
 }
