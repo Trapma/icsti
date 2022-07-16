@@ -12,43 +12,52 @@ function Projects() {
     const [isChecked, setIsChecked] = useState(true)
     const [page, setPage] = useState(1)
     const [taskId, setTaskId] = useState('')
-    const [totalPages, setTotalPages] = useState(false)
+    const [totalRecords, setTotalRecords] = useState(false)
     const [fetchPosts, isPostsLoading, postError] = useFetching(async ({ textSearch, isChecked, page = 0, taskId }) => {
-
+        console.log('useFetching start', page, taskId)
         if (page && taskId) {
+            console.log('useFetching start change request', page, taskId)
             const response = await PostService.getTask(taskId, page);
             const result = response.data
             setPosts(result.task_result.records);
-            setTotalPages(result.pages_number)
+            setTotalRecords(result.current_page)
             setPage(result.current_page)
         }
 
         const response = await PostService.getSearchPost(textSearch, isChecked);
-        const result = response.data
-        setTaskId(result.task_id)
+        const getTaskId = response.data.task_id
+        setTaskId(getTaskId)
         // setPosts(result.task_result.records);
         // setTotalPages(result.pages_number)
+        const getPosts = async () => {
+            return await new Promise(resolve => {
 
-        const timer = setTimeout(async () => {
-            const response = await PostService.getTask(taskId);
-            const result = response.data
-            // если нет данных сбрасываем таймер и возвращаем ошибку (обрабатывается в hooks)
-            console.log('test response ', response.data);
-            console.log('test response.task_status ', response.data.task_status);
-            console.log('test response (task_status === SUCCESS) = ', response.data.task_status === "SUCCESS");
+                const timer = setInterval(async () => {
+                    const response = await PostService.getTask(getTaskId);
+                    const result = response.data;
+                    // если нет данных сбрасываем таймер и возвращаем ошибку (обрабатывается в hooks)
 
-            if (!result) {
-                clearTimeout(timer);
-                return response;
-            }
+                    if (!result) {
+                        clearInterval(timer);
+                        resolve(response)
+                        return;
+                    }
 
-            if (result.task_status === "SUCCESS") {
-                clearTimeout(timer);
-                setPosts(result.task_result.records);
-                setTotalPages(result.pages_number)
-                setPage(result.current_page)
-            }
-        }, 500);
+                    if (result.task_status === "SUCCESS") {
+                        clearInterval(timer);
+                        resolve(result)
+                        return;
+                    }
+                }, 500);
+            })
+        }
+
+        const result = await getPosts()
+        console.log('rest result task', result);
+        setPosts(result.task_result.records);
+        setTotalRecords(result.current_page);
+        setPage(result.current_page);
+
     });
 
     // useEffect(() => {
@@ -60,6 +69,7 @@ function Projects() {
         fetchPosts({ textSearch, isChecked });
     }
     const changePage = (page) => {
+        console.log('start change page', page, taskId)
         setPage(page)
         fetchPosts({ page, taskId })
     }
@@ -76,7 +86,11 @@ function Projects() {
             ) : (
                 <CardList posts={posts} type={config.cardType.db} />
             )}
-            <PaginationUi page={page} changePage={changePage} totalPages={totalPages} />
+            {
+                posts.length > 0 &&
+                <PaginationUi page={page} changePage={changePage} totalRecords={totalRecords} />
+            }
+
         </div>
     );
 }
