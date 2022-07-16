@@ -1,8 +1,7 @@
-import React from 'react'
 import { BadgesUi } from './UI/badges/BadgesUi'
 import { Row, Col } from 'react-bootstrap'
 
-const CardItem = (props) => {
+const CardItemDb = (props) => {
 
     console.log('lk', props)
     const creators = []
@@ -55,4 +54,4 @@ const CardItem = (props) => {
     )
 }
 
-export default CardItem
+export default CardItemDb

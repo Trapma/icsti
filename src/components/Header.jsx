@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { SearchUi } from './UI/search/SearchUi'
 
 export const Header = ({ title, search, setIsChecked, isChecked }) => {

@@ -1,9 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import Header from "../components/Header";
 import CardList from "../components/CardList";
 import PostService from "../API/PostService";
 import { LoaderUi } from "../components/UI/loader/LoaderUi";
 import { useFetching } from "../hooks/useFetching";
+import config from "../config";
 
 function Projects() {
     const [posts, setPosts] = useState([]);
@@ -31,7 +32,7 @@ function Projects() {
                     <LoaderUi animation={"border"} variant={"dark"} />
                 </div>
             ) : (
-                <CardList posts={posts} />
+                <CardList posts={posts} type={config.cardType.db} />
             )}
         </div>
     );
