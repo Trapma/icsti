@@ -21,11 +21,11 @@ export default class PostService {
     return response;
   }
 
-  static async getTask(task_id, page) {
+  static async getTask(taskId, page) {
     const response = await axios.get(`${API_ICSTI}/search/result`, {
       params: {
-        task_id,
-        page,
+        task_id: taskId,
+        page: page,
       },
     });
     return response;
