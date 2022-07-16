@@ -22,6 +22,7 @@ function Projects() {
             setPosts(result.task_result.records);
             setTotalRecords(result.current_page)
             setPage(result.current_page)
+            return
         }
 
         const response = await PostService.getSearchPost(textSearch, isChecked);
