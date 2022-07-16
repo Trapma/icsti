@@ -4,9 +4,6 @@ import CardItemNews from './CardItemNews'
 import config from '../config'
 
 const CardList = ({ posts, title, type }) => {
-    if (!posts.length) {
-        return <h1 style={{ textAlign: "center" }}>Ничего не найдено...</h1>
-    }
 
     return (
         <div>

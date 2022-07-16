@@ -3,7 +3,7 @@ import Pagination from 'react-bootstrap/Pagination';
 import { useEffect, useState } from "react";
 
 export const PaginationUi = ({ totalRecords, page, changePage }) => {
-  const totalPages = 500 / 10
+  const totalPages = Math.ceil(totalRecords / 10)
   const pagesArray = getPagesArray(totalPages - 1)
   const [index, setIndex] = useState({ start: 1, end: 5 })
   const [filterArray, setFilterArray] = useState(pagesArray.slice(index.start, index.end - 1))
@@ -109,7 +109,7 @@ export const PaginationUi = ({ totalRecords, page, changePage }) => {
 
         <Pagination.Item
           onClick={() => firstPagination()}
-          className={page === 1 ? 'active' : ''}
+          className={Number(page) === 1 ? 'active' : ''}
         >{1}</Pagination.Item>
 
 
@@ -125,7 +125,7 @@ export const PaginationUi = ({ totalRecords, page, changePage }) => {
             <Pagination.Item
               onClick={() => changePage(p)}
               key={p}
-              className={page === p ? 'active' : ''}
+              className={Number(page) === p ? 'active' : ''}
             >{p}</Pagination.Item>
           )
         }
@@ -140,7 +140,7 @@ export const PaginationUi = ({ totalRecords, page, changePage }) => {
 
         <Pagination.Item
           onClick={() => lastPagination()}
-          className={page === totalPages ? 'active' : ''}
+          className={Number(page) === totalPages ? 'active' : ''}
         >{totalPages}</Pagination.Item>
 
         <Pagination.Next

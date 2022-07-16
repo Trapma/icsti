@@ -11,21 +11,22 @@ export default class PostService {
   //   return response.data;
   // }
 
-  static async getSearchPost(textSearch, isChecked) {
+  static async getSearchPost(textSearch, isChecked, page) {
+    console.log("search post ", textSearch, page);
     const domain = isChecked ? "zenodo" : "core";
     const response = await axios.get(`${API_ICSTI}/search/${domain}`, {
       params: {
         q: textSearch,
+        page,
       },
     });
     return response;
   }
 
-  static async getTask(taskId, page) {
+  static async getTask(taskId) {
     const response = await axios.get(`${API_ICSTI}/search/result`, {
       params: {
         task_id: taskId,
-        page: page,
       },
     });
     return response;
