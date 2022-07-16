@@ -3,17 +3,16 @@ import React, { useEffect, useState } from "react";
 import Header from "../components/Header";
 import { useFetching } from "../hooks/useFetching";
 import { LoaderUi } from "../components/UI/loader/LoaderUi";
-import PostService from "../API/PostService";
+import NewsService from "../API/NewsService";
 import CardList from "../components/CardList";
 import config from "../config";
 
 
 function News() {
     const [postNews, setPostsNews] = useState([]);
-    const [fetchPosts, isPostsLoading, postError] = useFetching(async (textSearch, isChecked) => {
-        const postNews = await PostService.getNews();
-        console.log('postNews', postNews)
-        setPostsNews(postNews);
+    const [fetchPosts, isPostsLoading, postError] = useFetching(async () => {
+        const response = await NewsService.getNews();
+        setPostsNews(response.data);
     });
 
     useEffect(() => {

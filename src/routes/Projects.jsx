@@ -10,8 +10,8 @@ function Projects() {
     const [posts, setPosts] = useState([]);
     const [isChecked, setIsChecked] = useState(true)
     const [fetchPosts, isPostsLoading, postError] = useFetching(async (textSearch, isChecked) => {
-        const posts = await PostService.getSearch(textSearch, isChecked);
-        setPosts(posts.task_result.records);
+        const response = await PostService.getSearchPost(textSearch, isChecked);
+        setPosts(response.data.task_result.records);
     });
 
     // useEffect(() => {
@@ -24,7 +24,7 @@ function Projects() {
     }
     return (
         <div>
-            <Header isChecked={isChecked} setIsChecked={setIsChecked} search={search} title="Проекты" />
+            <Header isChecked={isChecked} setIsChecked={setIsChecked} search={search} title="База данных" />
 
             {postError && <h1>Произошла ошибка ${postError}</h1>}
             {isPostsLoading ? (

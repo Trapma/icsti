@@ -29,7 +29,7 @@ const Navigation = () => {
                             <Link className="nav-link px-lg-3 py-3 py-lg-4" to='/service'> Услуги</Link>
                         </li>
                         <li className="nav-item">
-                            <Link className="nav-link px-lg-3 py-3 py-lg-4" to='/project'> Проекты</Link>
+                            <Link className="nav-link px-lg-3 py-3 py-lg-4" to='/project'> База данных</Link>
                         </li>
                         {/* <li className="nav-item">
                             <Link className="nav-link px-lg-3 py-3 py-lg-4" to='/archive'>Архивы</Link>
