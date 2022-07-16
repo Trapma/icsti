@@ -18,28 +18,26 @@ export default class PostService {
         q: textSearch,
       },
     });
-
-    const task_id = response.data.task_id;
-    return this.getTask(task_id);
+    return response;
   }
 
-  static async getTask(task_id) {
-    const timer = setTimeout(async () => {
-      const response = await axios.get(`${API_ICSTI}/search/result`, {
-        params: {
-          task_id,
-        },
-      });
-      // если нет данных сбрасываем таймер и возвращаем ошибку (обрабатывается в hooks)
-      if (!response.data) {
-        clearTimeout(timer);
-        return response;
-      }
-
-      if (response.data.task_status === "SUCCESS") {
-        clearTimeout(timer);
-        return response;
-      }
-    }, 500);
+  static async getTask(task_id, page) {
+    const response = await axios.get(`${API_ICSTI}/search/result`, {
+      params: {
+        task_id,
+        page,
+      },
+    });
+    return response;
   }
+
+  // static async getPageTasks(limit = 10, page = 1) {
+  //   const response = await axios.get("https://jsonplaceholder.typicode.com/posts", {
+  //     params: {
+  //       _limit: limit,
+  //       _page: page,
+  //     },
+  //   });
+  //   return response;
+  // }
 }
