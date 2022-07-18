@@ -16,7 +16,7 @@ export default class PostService {
     const domain = isChecked ? "zenodo" : "core";
     const response = await axios.get(`${API_ICSTI}/search/${domain}`, {
       params: {
-        q: textSearch,
+        query: textSearch,
         page,
       },
     });
