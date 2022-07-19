@@ -1,5 +1,6 @@
 import { BadgesUi } from './UI/badges/BadgesUi'
 import { Row, Col } from 'react-bootstrap'
+import { CheckCircle } from 'react-bootstrap-icons';
 
 const CardItemDb = (props) => {
 
@@ -17,7 +18,7 @@ const CardItemDb = (props) => {
         <div className="container" >
             <div className="text-start post-preview">
                 <a href={props.post.link} className='text-left'>
-                    <h4 className="fs-4 text-start">{props.post.title}</h4>
+                    <h4 className="fs-4 text-start"><CheckCircle color="grey"/> {props.post.title}</h4>
                     <p className="fs-6 my-0 text-start">{subTitle}</p>
                 </a>
                 <div className='align-items-end mt-2' style={{ fontSize: "12px" }}>
